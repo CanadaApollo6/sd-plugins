@@ -34,6 +34,11 @@ export function registerListProjects(
           client: a.client.name,
           billable: a.task_assignments.some((t) => t.billable),
           active: a.is_active,
+          tasks: a.task_assignments.map((t) => ({
+            id: t.task.id,
+            name: t.task.name,
+            billable: t.billable,
+          })),
         }));
 
         return {
