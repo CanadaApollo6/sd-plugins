@@ -18,10 +18,7 @@ export function registerListProjects(
     },
     async (params) => {
       try {
-        const me = await client.getMe();
-        const response = await client.getMyProjectAssignments({
-          user_id: me.id,
-        });
+        const response = await client.getMyProjectAssignments();
 
         let assignments = response.project_assignments;
         if (params.is_active !== undefined) {

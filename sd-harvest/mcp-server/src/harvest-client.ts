@@ -87,15 +87,15 @@ export class HarvestClient {
   }
 
   async getMyProjectAssignments(
-    params: GetMyProjectAssignmentsParams,
+    params?: Pick<GetMyProjectAssignmentsParams, "per_page">,
   ): Promise<HarvestProjectAssignmentsResponse> {
     const queryParams: Record<string, string> = {};
-    if (params.per_page !== undefined)
+    if (params?.per_page !== undefined)
       queryParams.per_page = String(params.per_page);
 
     return this.request<HarvestProjectAssignmentsResponse>(
       "GET",
-      `/users/${params.user_id}/project_assignments`,
+      "/users/me/project_assignments",
       { params: queryParams },
     );
   }
