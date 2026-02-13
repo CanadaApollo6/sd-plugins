@@ -1,0 +1,8 @@
+{
+  "name": "sd-harvest",
+  "version": "0.1.0",
+  "description": "Harvest time tracking integration — log daily work, assemble weekly timesheets from git history, submit to Harvest.",
+  "author": {
+    "name": "Smart Data"
+  }
+}

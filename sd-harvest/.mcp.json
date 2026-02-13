@@ -1,0 +1,10 @@
+{
+  "harvest": {
+    "command": "node",
+    "args": ["${CLAUDE_PLUGIN_ROOT}/mcp-server/dist/index.js"],
+    "env": {
+      "HARVEST_ACCESS_TOKEN": "${HARVEST_ACCESS_TOKEN}",
+      "HARVEST_ACCOUNT_ID": "${HARVEST_ACCOUNT_ID}"
+    }
+  }
+}
